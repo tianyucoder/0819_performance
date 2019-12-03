@@ -22,10 +22,15 @@
   
   let test = document.getElementById('test')
   let index = 0
-  setInterval(()=>{
+  let id
+  id = setInterval(()=>{
     index++
     test.style.transform = `translateX(${index}px)`
   },16)
+  
+  setTimeout(()=>{
+      clearInterval(id)
+  },2000)
   
 </script>
 </body>

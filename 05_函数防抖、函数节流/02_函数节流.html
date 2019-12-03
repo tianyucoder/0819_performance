@@ -17,8 +17,19 @@
   *   举例：fps游戏，鼠标按住不松手，子弹也不会连成一条线
   *   实现：定时器、标识
   *   需求：在鼠标滚轮滚动的时候，每隔2秒钟，打印一次
-  *   
   * */
+  
+  let isCanLog = true
+  
+  document.onscroll = ()=>{
+     if(isCanLog){
+       console.log(1)
+       isCanLog = false
+       setTimeout(()=>{
+         isCanLog = true
+       },2000)
+     }
+  }
   
 </script>
 </body>
