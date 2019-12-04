@@ -5,9 +5,15 @@
   <title>数据同步2</title>
 </head>
 <body>
-<input type="text" id="val">
+<input type="text" id="input1">
 <script type="text/javascript">
 
+  window.onstorage = (a)=>{
+    console.log(a)
+    let input1 = document.getElementById('input1')
+    input1.value = a.newValue
+  }
+  
 </script>
 </body>
 </html>

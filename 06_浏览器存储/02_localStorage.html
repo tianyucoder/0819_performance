@@ -13,6 +13,26 @@
 
 <script type="text/javascript">
 
+  let btn1 = document.getElementById('btn1')
+  let btn2 = document.getElementById('btn2')
+  let btn3 = document.getElementById('btn3')
+  let btn4 = document.getElementById('btn4')
+
+  btn1.onclick = ()=>{
+    let person = {name:'peiqi',age:18}
+    localStorage.setItem('a',JSON.stringify(person))
+  }
+  btn2.onclick = ()=>{
+    let result = localStorage.getItem('a')
+    console.log(JSON.parse(result))
+  }
+  btn3.onclick = ()=>{
+    localStorage.removeItem('a')
+  }
+  btn4.onclick = ()=>{
+    localStorage.clear()
+  }
+
 
 </script>
 </body>
